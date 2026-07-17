@@ -119,19 +119,16 @@ export function Site() {
             <article className="card">
               <MediaImg src="/assets/amix-marola.png" alt="Capa A Mix — Marola" className="card__img" glitch />
               <h3 className="card__title">{t.universe.marola.title}</h3>
-              <p className="card__desc">{t.universe.marola.desc}</p>
               <p className="card__meta">{t.universe.marola.credit}</p>
             </article>
             <article className="card">
               <MediaImg src="/assets/amix-clubpenguin.png" alt="Capa A Mix — Digital / Club Penguin" className="card__img" glitch />
               <h3 className="card__title">{t.universe.digital.title}</h3>
-              <p className="card__desc">{t.universe.digital.desc}</p>
               <p className="card__meta">{t.universe.digital.credit}</p>
             </article>
             <article className="card">
               <MediaImg src="/assets/amix-folia.png" alt="Capa A Mix — Folia e Groove" className="card__img" glitch />
               <h3 className="card__title">{t.universe.carnaval.title}</h3>
-              <p className="card__desc">{t.universe.carnaval.desc}</p>
               <p className="card__meta">{t.universe.carnaval.credit}</p>
             </article>
           </Reveal>
