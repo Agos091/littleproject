@@ -2,6 +2,11 @@
 
 import { useState, type CSSProperties } from "react";
 
+// Under GitHub Pages the app lives at /<repo>/, so root-absolute asset paths
+// (`/assets/...`) need the basePath prepended. Empty locally.
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const withBase = (p: string) => (p.startsWith("/") ? `${BASE}${p}` : p);
+
 type MediaImgProps = {
   src: string;
   alt: string;
@@ -34,14 +39,16 @@ export function MediaImg({ src, alt, className, style, glitch }: MediaImgProps) 
     );
   }
 
+  const resolved = withBase(src);
+
   if (glitch) {
-    const glitchStyle = { ...style, "--glitch-src": `url("${src}")` } as CSSProperties;
+    const glitchStyle = { ...style, "--glitch-src": `url("${resolved}")` } as CSSProperties;
     const variant = glitch === "subtle" ? "glitch--subtle" : "";
     return (
       <span className={`glitch ${variant} ${className ?? ""}`} style={glitchStyle}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={resolved}
           alt={alt}
           className="glitch__img"
           loading="lazy"
@@ -57,7 +64,7 @@ export function MediaImg({ src, alt, className, style, glitch }: MediaImgProps) 
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={src}
+      src={resolved}
       alt={alt}
       className={`media ${className ?? ""}`}
       style={style}
