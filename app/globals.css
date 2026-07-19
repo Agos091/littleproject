@@ -354,6 +354,15 @@ img {
 .grid--big {
   height: 620px;
 }
+/* one big vertical image on the left, two stacked smaller ones on the right */
+.grid--feature {
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 560px;
+}
+.grid--feature > :first-child {
+  grid-row: 1 / span 2;
+}
 .cover {
   width: 100%;
   height: 100%;
@@ -584,6 +593,7 @@ img {
 .amix-hero {
   width: 100%;
   aspect-ratio: 3 / 2;
+  margin-bottom: 32px;
 }
 
 /* ---------- universe cards ---------- */
@@ -778,6 +788,15 @@ img {
   .grid .cover,
   .grid--big .cover {
     height: 62vw;
+  }
+  /* keep the feature layout (big left + two stacked right) on narrow screens */
+  .grid--feature {
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 118vw;
+  }
+  .grid--feature .cover {
+    height: 100%;
   }
   .hero__inner {
     padding: 0 20px 40px;

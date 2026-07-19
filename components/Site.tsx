@@ -9,7 +9,7 @@ import MetaBalls from "./MetaBalls";
 import { Logo } from "./Logo";
 
 export function Site() {
-  const [lang, setLang] = useState<Lang>("pt");
+  const [lang, setLang] = useState<Lang>("en");
   const t = COPY[lang];
 
   return (
@@ -98,37 +98,27 @@ export function Site() {
           </Reveal>
         </section>
 
-        {/* 04 — A MIX */}
-        <section className="section container">
-          <Reveal>
-            <p className="tag">{t.amix.tag}</p>
-          </Reveal>
-          <Reveal delay={80}>
-            <MediaImg src="/assets/amix-geral.png" alt="Capa geral A Mix" className="amix-hero cover" glitch />
-          </Reveal>
-        </section>
-
-        {/* 05 — UNIVERSO A MIX */}
+        {/* 04 — UNIVERSO A MIX */}
         <section className="section container">
           <Reveal>
             <p className="tag">{t.universe.tag}</p>
             <h2 className="h2">{t.universe.title}</h2>
             <p className="section__sub">{t.universe.sub}</p>
           </Reveal>
-          <Reveal className="cards" delay={80}>
+          <Reveal delay={80}>
+            <MediaImg src="/assets/amix-geral.png" alt="Capa geral A Mix" className="amix-hero cover" glitch />
+          </Reveal>
+          <Reveal className="cards" delay={120}>
             <article className="card">
               <MediaImg src="/assets/amix-marola.png" alt="Capa A Mix — Marola" className="card__img" glitch />
-              <h3 className="card__title">{t.universe.marola.title}</h3>
               <p className="card__meta">{t.universe.marola.credit}</p>
             </article>
             <article className="card">
               <MediaImg src="/assets/amix-clubpenguin.png" alt="Capa A Mix — Digital / Club Penguin" className="card__img" glitch />
-              <h3 className="card__title">{t.universe.digital.title}</h3>
               <p className="card__meta">{t.universe.digital.credit}</p>
             </article>
             <article className="card">
               <MediaImg src="/assets/amix-folia.png" alt="Capa A Mix — Folia e Groove" className="card__img" glitch />
-              <h3 className="card__title">{t.universe.carnaval.title}</h3>
               <p className="card__meta">{t.universe.carnaval.credit}</p>
             </article>
           </Reveal>
@@ -142,7 +132,19 @@ export function Site() {
               <h2 className="h2 h2--sm">{t.direction.title}</h2>
               <p className="body">{t.direction.body}</p>
             </div>
-            <MediaImg src="/assets/agos-02.jpg" alt="Agos com vinil" className="cover cover--portrait" glitch="subtle" />
+            <MediaImg src="/assets/papel%20fisico.png" alt="Do papel para o espaço físico" className="cover cover--portrait" glitch="subtle" />
+          </Reveal>
+        </section>
+
+        {/* 06.5 — EM BREVE */}
+        <section className="section container">
+          <Reveal className="split split--center split--rev">
+            <MediaImg src="/assets/em-breve.gif" alt={t.soon.tag} className="cover cover--portrait" glitch="subtle" />
+            <div>
+              <p className="tag">{t.soon.tag}</p>
+              <h2 className="h2 h2--sm">{t.soon.title}</h2>
+              <p className="body">{t.soon.body}</p>
+            </div>
           </Reveal>
         </section>
 
@@ -170,13 +172,15 @@ export function Site() {
 
         {/* 08 — CONEXÃO COM A CENA */}
         <section className="section container">
-          <Reveal className="split split--center split--rev">
-            <MediaImg src="/assets/fuso-poster.jpg" alt="Fuso" className="cover cover--portrait" glitch="subtle" />
-            <div>
-              <p className="tag">{t.scene.tag}</p>
-              <h2 className="h2 h2--sm">{t.scene.title}</h2>
-              <p className="body">{t.scene.body}</p>
-            </div>
+          <Reveal>
+            <p className="tag">{t.scene.tag}</p>
+            <h2 className="h2 h2--sm">{t.scene.title}</h2>
+            <p className="body">{t.scene.body}</p>
+          </Reveal>
+          <Reveal className="grid grid--feature" delay={80}>
+            <MediaImg src="/assets/agos%20na%20cena%20Principal.jpg" alt="Agos na cena — principal" className="cover" glitch="subtle" />
+            <MediaImg src="/assets/agos%20na%20cena%201.jpg" alt="Agos na cena 1" className="cover" glitch="subtle" />
+            <MediaImg src="/assets/agos%20na%20cena%202.jpg" alt="Agos na cena 2" className="cover" glitch="subtle" />
           </Reveal>
         </section>
 

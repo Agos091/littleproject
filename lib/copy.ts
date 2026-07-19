@@ -17,6 +17,7 @@ export type Copy = {
   };
   vol01: { tag: string; title: string; body: string; credit: string; watch: string };
   direction: { tag: string; title: string; body: string };
+  soon: { tag: string; title: string; body: string };
   digital: { tag: string; title: string; yt: string; sc: string };
   scene: { tag: string; title: string; body: string };
   closing: { sub: string; credit: string };
@@ -80,6 +81,11 @@ export const COPY: Record<Lang, Copy> = {
       title: "Do papel para o espaço físico",
       body: "Cenário, iluminação, enquadramentos e edição formam a estética do lançamento — construídos em parceria com a Pingoestudios para que som e imagem funcionem como uma única experiência.",
     },
+    soon: {
+      tag: "EM BREVE",
+      title: "Vem coisa nova por aí",
+      body: "Novos sets, capítulos e experiências audiovisuais em produção. Fica de olho — o próximo lançamento do Little Project está chegando.",
+    },
     digital: {
       tag: "PRESENÇA DIGITAL",
       title: "Onde assistir e ouvir",
@@ -101,7 +107,7 @@ export const COPY: Record<Lang, Copy> = {
       kicker: "A MIX — LITTLE PROJECT",
       title1: "Little",
       title2: "Project",
-      sub: "Agos' independent audiovisual project, focused on sets built as audiovisual experiences — each centered on its own theme.",
+      sub: "Independent audiovisual project, focused on sets built as audiovisual experiences — each centered on its own theme.",
     },
     manifesto: {
       tag: "MANIFESTO",
@@ -153,6 +159,11 @@ export const COPY: Record<Lang, Copy> = {
       title: "From paper to physical space",
       body: "Set design, lighting, framing and editing shape the release's aesthetic — built together with Pingoestudios so sound and image work as a single experience.",
     },
+    soon: {
+      tag: "COMING SOON",
+      title: "New things are on the way",
+      body: "New sets, chapters and audiovisual experiences in the works. Stay tuned — the next Little Project release is on its way.",
+    },
     digital: {
       tag: "DIGITAL PRESENCE",
       title: "Where to watch & listen",
@@ -174,5 +185,5 @@ export const COPY: Record<Lang, Copy> = {
 export const LINKS = {
   instagram: "https://www.instagram.com/little_project_tv/",
   youtube: "https://www.youtube.com/watch?v=aUK-lVMN5V8",
-  soundcloud: "https://m.soundcloud.com/littleproject/agos-little-project-vol-01",
+  soundcloud: "https://soundcloud.com/littleproject",
 };
